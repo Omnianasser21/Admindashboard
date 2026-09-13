@@ -10,24 +10,24 @@ import { MediaPage } from '@/features/media/pages/MediaPage';
 import { SettingsPage } from '@/features/settings/pages/SettingsPage';
 
 const router = createBrowserRouter([
-  { path: '/login', element: <LoginPage /> },
-  { path: '/register', element: <RegisterPage /> },
+  { index: true, element: <LoginPage /> },
+  { path: "/register", element: <RegisterPage /> },
   {
-    path: '/',
+    path: "/",
     element: (
       <ProtectedRoute>
         <DashboardLayout />
       </ProtectedRoute>
     ),
     children: [
-      { path: 'dashboard', element: <DashboardPage /> },
-      { path: 'content', element: <ContentListPage /> },
-      { path: 'content/:id', element: <EditContentPage /> },
-      { path: 'media', element: <MediaPage /> },
-      { path: 'settings', element: <SettingsPage /> },
+      { path: "dashboard", element: <DashboardPage /> },
+      { path: "content", element: <ContentListPage /> },
+      { path: "content/:id", element: <EditContentPage /> },
+      { path: "media", element: <MediaPage /> },
+      { path: "settings", element: <SettingsPage /> },
     ],
   },
-  { path: '*', element: <Navigate to="/dashboard" replace /> },
+  { path: "*", element: <Navigate to="/dashboard" replace /> },
 ]);
 
 export { router };
