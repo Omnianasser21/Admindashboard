@@ -71,7 +71,7 @@ export function EditContentPage() {
         <p className="text-sm text-muted">Edit the content for this section.</p>
       </div>
 
-      <Card className="space-y-5">
+      <Card className="space-y-5 p-10">
         <Input
           name="title"
           label="Title"
